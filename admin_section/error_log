@@ -1,0 +1,121 @@
+[14-Mar-2021 15:19:09 America/New_York] PHP Notice:  Undefined variable: conn in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 29
+[14-Mar-2021 15:19:09 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 29
+[14-Mar-2021 15:19:09 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 30
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:20:24 America/New_York] PHP Notice:  Undefined index: fname in /home/doortvxk/geniusgistmagazine.com/admin_section/online.php on line 41
+[14-Mar-2021 15:57:27 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function num_format() in /home/doortvxk/geniusgistmagazine.com/admin_section/delivery.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/doortvxk/geniusgistmagazine.com/admin_section/delivery.php on line 47
+[14-Mar-2021 16:14:57 America/New_York] PHP Notice:  Undefined index: user_email in /home/doortvxk/geniusgistmagazine.com/admin_section/user-profile.php on line 58
+[14-Mar-2021 16:16:02 America/New_York] PHP Notice:  Undefined index: user_email in /home/doortvxk/geniusgistmagazine.com/admin_section/user-profile.php on line 58
+[15-Mar-2021 05:52:26 America/New_York] PHP Notice:  Undefined variable: con in /home/doortvxk/geniusgistmagazine.com/admin_section/ebook.php on line 113
+[15-Mar-2021 05:52:26 America/New_York] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/doortvxk/geniusgistmagazine.com/admin_section/ebook.php on line 113
+[13-May-2021 16:32:50 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 49
+[13-May-2021 16:32:50 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 50
+[13-May-2021 16:32:50 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 49
+[13-May-2021 16:32:50 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 50
+[13-May-2021 16:32:50 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 49
+[13-May-2021 16:32:50 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 50
+[13-May-2021 16:32:50 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 49
+[13-May-2021 16:32:50 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 50
+[13-May-2021 16:32:50 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 49
+[13-May-2021 16:32:50 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 50
+[13-May-2021 16:32:50 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 49
+[13-May-2021 16:32:50 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 50
+[13-May-2021 16:32:50 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 49
+[13-May-2021 16:32:50 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 50
+[13-May-2021 16:34:06 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:34:06 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:34:06 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:34:06 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:34:06 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:34:06 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:34:06 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:35:25 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:35:25 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:35:25 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:35:25 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:35:25 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:35:25 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:35:25 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:37:25 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:37:25 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:37:25 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:37:25 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:37:25 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:37:25 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:37:25 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:38:07 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:38:07 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:38:07 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:38:07 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:38:07 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:38:07 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:38:07 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:39:27 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:39:27 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:39:27 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:39:27 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:39:27 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:39:27 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[13-May-2021 16:39:27 America/New_York] PHP Notice:  Undefined index: email in /home/premucwu/mystore.techlybro.com/admin_section/all_orders.php on line 53
+[20-May-2021 10:42:39 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 27
+[20-May-2021 10:42:39 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 36
+[20-May-2021 10:43:34 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 27
+[20-May-2021 10:43:34 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 36
+[20-May-2021 10:47:31 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 28
+[20-May-2021 10:47:31 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 37
+[20-May-2021 10:48:02 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 28
+[20-May-2021 10:48:02 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 37
+[20-May-2021 11:30:16 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[20-May-2021 11:30:16 America/New_York] PHP Warning:  Use of undefined constant tcode - assumed 'tcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[20-May-2021 11:30:48 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[20-May-2021 11:30:48 America/New_York] PHP Warning:  Use of undefined constant tcode - assumed 'tcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[20-May-2021 11:35:21 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[20-May-2021 11:35:58 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[20-May-2021 11:36:28 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[20-May-2021 11:38:31 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[20-May-2021 11:38:31 America/New_York] PHP Warning:  mysqli_errno() expects parameter 1 to be mysqli, string given in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 91
+[20-May-2021 11:40:48 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[20-May-2021 11:40:48 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_error() in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php:91
+Stack trace:
+#0 {main}
+  thrown in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 91
+[21-May-2021 04:49:06 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[21-May-2021 04:49:06 America/New_York] PHP Warning:  Use of undefined constant tcode - assumed 'tcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 83
+[21-May-2021 04:49:38 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[21-May-2021 04:49:38 America/New_York] PHP Warning:  Use of undefined constant tcode - assumed 'tcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 83
+[21-May-2021 04:53:51 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[21-May-2021 04:53:51 America/New_York] PHP Warning:  Use of undefined constant tcode - assumed 'tcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 83
+[21-May-2021 05:02:16 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[21-May-2021 05:02:16 America/New_York] PHP Warning:  Use of undefined constant tcode - assumed 'tcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 83
+[21-May-2021 05:35:54 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[21-May-2021 05:35:54 America/New_York] PHP Warning:  Use of undefined constant tcode - assumed 'tcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 83
+[21-May-2021 06:00:49 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[21-May-2021 06:00:49 America/New_York] PHP Warning:  Use of undefined constant tcode - assumed 'tcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 83
+[21-May-2021 06:01:24 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[21-May-2021 06:01:24 America/New_York] PHP Warning:  Use of undefined constant tcode - assumed 'tcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 83
+[21-May-2021 06:07:14 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[21-May-2021 06:07:48 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
+[21-May-2021 06:09:21 America/New_York] PHP Warning:  Use of undefined constant bcode - assumed 'bcode' (this will throw an Error in a future version of PHP) in /home/premucwu/mystore.techlybro.com/admin_section/pixel.php on line 82
