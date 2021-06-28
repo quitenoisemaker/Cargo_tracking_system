@@ -1,8 +1,11 @@
+<?php
+include('function/function.php');
+
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
-    
     <html lang="eng">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +25,9 @@
     <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
     <meta property="og:type" content="article" />
     <!--title-->
-    <title><?php echo $row_seo['site_name']." - ". $row_seo['site_tagline'] ?></title>
+    <title>
+        <?php echo $row_seo['site_name']." - ". $row_seo['site_tagline'] ?>
+    </title>
     <!--favicon icon-->
     <link rel="icon" href="site_images/<?php echo $row_details['image']; ?>" type="image/png" sizes="16x16">
     <!-- jQuery library -->
@@ -49,41 +54,123 @@
             Please fill the Contact Us form
         </small>
     </nav>
+    <?php
+    $tracking_num=$_GET['tracking_num'];
+
+        $get_details=mysqli_query($conn, "SELECT * FROM shipping WHERE tracking_num='$tracking_num'");
+        $row_details=mysqli_fetch_array($get_details);
+        $count_details = mysqli_num_rows($get_details);
+
+        if ($count_details>0) {
+           
+        
+     ?>
     <div class="container" style="padding: 20px;">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-md-10">
+                <h4 class="text-center p-3"><?php echo $row_details['tracking_num']; ?></h4>
                 <div class="card" style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);">
-                    <div class="card-body">
-                        <div class="container p-4">
-                            <form method="POST" id="billing">
-                                <h5 class="text-dark">Pay Online and Get a Copy Instantly. Stay Safe, go cashless</h5>
-                                <div class="p-4">
-                                    <img src="img/20.jpg" width="70"><img src="img/18.jpg" width="70"><img src="img/19.jpg" width="80">
-                                </div>
-                                <p class="text-dark">Your payment is safe. if anything goes wrong, we've got your back</p>
-                                <!-- <script src="https://js.paystack.co/v1/inline.js"></script> -->
-                                <button class="btn btn-primary" name="submit"> Pay Now</button>
-                            </form>
+                    <div class="p-2">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $row_details['percentage2'].'%'; ?>;"></div>
+                        </div>
+                        <div class="d-flex bd-highlight">
+                            <div class="p-2 flex-grow-1 bd-highlight"><?php echo $row_details['percentage2']."%"; ?> in process</div>
+                            <div class="p-2 bd-highlight">Completed</div>
+                        </div>
+                    </div>
+                    <div class="row p-3">
+                        <div class="col-lg-6">
+                            <h6>Shipper Information</h6>
+                            <hr>
+                            <p class="mb-0"><?php echo $row_details['s_name']; ?></p>
+                            <p class="mb-0"><?php echo $row_details['s_address']; ?></p>
+                            <p class="mb-0"><?php echo $row_details['s_phone']; ?></p>
+                            <p class="mb-0"><?php echo $row_details['s_email']; ?></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h6>Receiver Information</h6>
+                            <hr>
+                            <p class="mb-0"><?php echo $row_details['r_name']; ?></p>
+                            <p class="mb-0"><?php echo $row_details['r_address']; ?></p>
+                            <p class="mb-0"><?php echo $row_details['r_phone']; ?></p>
+                            <p class="mb-0"><?php echo $row_details['r_email']; ?></p>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-dark text-white text-center">SHIPMENT STATUS: <?php echo strtoupper($row_details['status']); ?></div>
+                    <div class="p-3">
+                        <h6>Shipment Information</h6>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <p style="font-size: 13px"><b>Origin</b></p>
+                                <p style="margin-top: -20px; font-size: 16px"><?php echo $row_details['origin2']; ?></p>
+                            </div>
+                            <div class="col-lg-4">
+                                <p style="font-size: 13px"><b>Package</b></p>
+                                <p style="margin-top: -20px; font-size: 16px"><?php echo $row_details['packages2']; ?></p>
+                            </div>
+                            <div class="col-lg-4">
+                                <p style="font-size: 13px"><b>Status</b></p>
+                                <p style="margin-top: -20px; font-size: 16px"><?php echo $row_details['status']; ?></p>
+                            </div>
+                            <div class="col-lg-4">
+                                <p style="font-size: 13px"><b>Destination</b></p>
+                                <p style="margin-top: -20px; font-size: 16px"><?php echo $row_details['destination2']; ?></p>
+                            </div>
+                            <div class="col-lg-4">
+                                <p style="font-size: 13px"><b>Weight</b></p>
+                                <p style="margin-top: -20px; font-size: 16px"><?php echo $row_details['weight2']; ?></p>
+                            </div>
+                            <div class="col-lg-4">
+                                <p style="font-size: 13px"><b>Quantity</b></p>
+                                <p style="margin-top: -20px; font-size: 16px"><?php echo $row_details['qty']; ?></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <hr>
                 <div class="">
                     <div class="card " style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);">
                         <div class="card-body">
-                            <h5 class="text-dark">Pay on delivery</h5>
-                                <p class="text-dark">Please note: We will never ask you for your password PIN,CVV or full card details over the phone or via email</p>
-                                <ul class="text-dark">
-                                    <li>Kindly note that you would have to make payment before opening your package.</li>
-                                    <li>Once the seal is broken, the item can only be returned if it is damaged, defective or has missing parts.</li>
-                                </ul><br>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Proceed </button>
+                            <h6>Shipment History</h6>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" style="font-size: 13px">Order Updated</th>
+                                        <th scope="col" style="font-size: 13px">Time</th>
+                                        <th scope="col" style="font-size: 13px">Location</th>
+                                        <th scope="col" style="font-size: 13px">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="font-size: 14px">Larry</td>
+                                        <td style="font-size: 14px">Mark</td>
+                                        <td style="font-size: 14px">Otto</td>
+                                        <td style="font-size: 14px">@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-size: 14px">Larry</td>
+                                        <td style="font-size: 14px">Mark</td>
+                                        <td style="font-size: 14px">Otto</td>
+                                        <td style="font-size: 14px">@mdo</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+<?php }else{ ?>
+
+        <div class="text-center p-3">
+            <h4>Opps! No Shipment found</h4>
+        </div>
+    <?php }  ?>
 </body>
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <script src="assets/sweetalert/sweetalert2.all.min.js"></script>

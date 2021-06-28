@@ -1,3 +1,7 @@
+<?php
+include('function/function.php');
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -50,108 +54,54 @@
             Please fill the Contact Us form
         </small>
     </nav>
+   
     <div class="container" style="padding: 20px;">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-md-10">
-                <h4 class="text-center p-3">6374eurii54</h4>
-                <div class="card" style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);">
-                    <div class="p-2">
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                        </div>
-                        <div class="d-flex bd-highlight">
-                            <div class="p-2 flex-grow-1 bd-highlight">85% in process</div>
-                            <div class="p-2 bd-highlight">Completed</div>
-                        </div>
+
+                <form action="result" method="GET" id="track">
+                    <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="tracking_num" placeholder="tracking number">
                     </div>
-                    <div class="row p-3">
-                        <div class="col-lg-6">
-                            <h6>Shipper Information</h6>
-                            <hr>
-                            <p class="mb-0">Lorem ipsum dolor sit amet</p>
-                            <p class="mb-0">Lorem ipsum dolor sit amet</p>
-                            <p class="mb-0">Lorem ipsum dolor sit amet</p>
-                            <p class="mb-0">Lorem ipsum dolor sit amet</p>
-                        </div>
-                        <div class="col-lg-6">
-                            <h6>Receiver Information</h6>
-                            <hr>
-                            <p class="mb-0">Lorem ipsum dolor sit amet</p>
-                            <p class="mb-0">Lorem ipsum dolor sit amet</p>
-                            <p class="mb-0">Lorem ipsum dolor sit amet</p>
-                            <p class="mb-0">Lorem ipsum dolor sit amet</p>
-                        </div>
+
+                    <div>
+                        <button class="btn btn-danger btn-block btn-sm text-white" name="submit">
+                            Track
+                        </button>
                     </div>
-                    <div class="p-3 bg-dark text-white text-center">SHIPMENT STATUS: ON HOLD</div>
-                    <div class="p-3">
-                        <h6>Shipment Information</h6>
-                        <hr>
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <p style="font-size: 13px"><b>Shipper Information</b></p>
-                                <p style="margin-top: -20px; font-size: 16px">Lorem ipsum dolor</p>
-                            </div>
-                            <div class="col-lg-4">
-                                <p style="font-size: 13px"><b>Shipper Information</b></p>
-                                <p style="margin-top: -20px; font-size: 16px">Lorem ipsum dolor</p>
-                            </div>
-                            <div class="col-lg-4">
-                                <p style="font-size: 13px"><b>Shipper Information</b></p>
-                                <p style="margin-top: -20px; font-size: 16px">Lorem ipsum dolor</p>
-                            </div>
-                            <div class="col-lg-4">
-                                <p style="font-size: 13px"><b>Shipper Information</b></p>
-                                <p style="margin-top: -20px; font-size: 16px">Lorem ipsum dolor</p>
-                            </div>
-                            <div class="col-lg-4">
-                                <p style="font-size: 13px"><b>Shipper Information</b></p>
-                                <p style="margin-top: -20px; font-size: 16px">Lorem ipsum dolor</p>
-                            </div>
-                            <div class="col-lg-4">
-                                <p style="font-size: 13px"><b>Shipper Information</b></p>
-                                <p style="margin-top: -20px; font-size: 16px">Lorem ipsum dolor</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="card " style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);">
-                        <div class="card-body">
-                            <h6>Shipment History</h6>
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col" style="font-size: 13px">Order Updated</th>
-                                        <th scope="col" style="font-size: 13px">Time</th>
-                                        <th scope="col" style="font-size: 13px">Location</th>
-                                        <th scope="col" style="font-size: 13px">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td style="font-size: 14px">Larry</td>
-                                        <td style="font-size: 14px">Mark</td>
-                                        <td style="font-size: 14px">Otto</td>
-                                        <td style="font-size: 14px">@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="font-size: 14px">Larry</td>
-                                        <td style="font-size: 14px">Mark</td>
-                                        <td style="font-size: 14px">Otto</td>
-                                        <td style="font-size: 14px">@mdo</td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                </form>
+
+                <?php if (isset($_POST['submit'])) {
+                   
+                   echo "<script>alert('success')</script>";
+                } ?>
+                
             </div>
         </div>
     </div>
 </body>
-<script src="https://js.paystack.co/v1/inline.js"></script>
 <script src="assets/sweetalert/sweetalert2.all.min.js"></script>
 <script src="js/custom.js"></script>
+<!-- <script >
+    $(document).on('submit', '#track', function(ev) {
+    ev.preventDefault();
+    let mee = $(this);
+    let mee_form = $(this).serialize();
+    $('.default-load').attr('hidden', true);
+    $('.let-load').removeAttr('hidden');
+    $('input').attr('readonly', true);
+    $('#track').find('button').attr('disabled', true);
+    
+ 
+        window.location = 'result';
+        
+        error: function(error_msg) {
+            console.log(error_msg);
+        }
+
+ 
+
+})
+</script> -->
 
 </html>
