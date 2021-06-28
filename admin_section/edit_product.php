@@ -9,6 +9,9 @@ if (!isset($_SESSION['username'])) {
 function format_date($date){
         return date('D, M jS Y', strtotime($date));
     }
+
+    $date = date('Y-m-d');
+    $time = date('H:i:s');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -97,7 +100,7 @@ function format_date($date){
                         </div>
                         <label>Status</label>
                                 <select required class="form-control" name="status">
-                                    <option value="" selected disabled><?php echo $row_code['status'];?></option>
+                                    <option value="<?php echo $row_code['status'];?>" selected><?php echo $row_code['status'];?></option>
                                     <option value="Pending">Pending</option>
                                     <option value="Pickup">Pickup</option>
                                     <option value="On Hold">On Hold</option>
@@ -165,6 +168,9 @@ function format_date($date){
             $update_product="UPDATE `shipping` SET `s_name`='$_POST[s_name]',`s_phone`='$_POST[s_phone]',`s_email`='$_POST[s_email]',`s_address`='$_POST[s_address]',`r_name`='$_POST[r_name]',`r_phone`='$_POST[r_phone]',`r_email`='$_POST[r_email]',`r_address`='$_POST[r_address]',`status`='$_POST[status]',`weight2`='$_POST[weight]',`packages2`='$_POST[package]',`qty`='$_POST[quantity]',`origin2`='$_POST[origin]',`destination2`='$_POST[destination]',`current_location`='$_POST[current_location]',`pickup_date`='$_POST[d_date]',`comment2`='$_POST[comment]',`percentage2`='$_POST[percentage]' WHERE id='$id'";
 
               $sql= mysqli_query($conn, $update_product);
+
+
+              $insert_history = mysqli_query($conn, "INSERT INTO `histrory`(`id`, `tracking_num`, `location`, `status`, `date_updated`, `time_updated`, `remarks`) VALUES (NULL,'$_POST[tracking]','$_POST[current_location]','$_POST[status]','$date','$time','$_POST[comment]')");
 
         
         
