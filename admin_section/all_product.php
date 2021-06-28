@@ -27,10 +27,12 @@ function format_date($date){
   <thead class="thead-dark">
     <tr>
       
-      <th scope="col">Image</th>
+      <th scope="col">Tracking Number</th>
       
-      <th scope="col"> Title</th>
-      <th scope="col">Price (&#x20A6 )</th>
+      <th scope="col">Shipper Name</th>
+      <th scope="col">Receiver Name</th>
+      <th scope="col">Date</th>
+      <th scope="col">Status</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -39,23 +41,19 @@ function format_date($date){
       <?php 
                                       
                                     //get online payment
-                                    $get_product=mysqli_query($conn, "SELECT * FROM products ORDER BY product_id desc");
+                                    $get_product=mysqli_query($conn, "SELECT * FROM shipping ORDER BY id desc");
                                     while($row_payment=mysqli_fetch_array($get_product)){ 
                                     ?>
     <tr>
-      <th scope="row"><img src="product_images/<?php echo "resized_". $row_payment['product_image']?>" width="50px"> </th>
+      <th scope="row"><?php echo $row_payment['tracking_num']  ?></th>
       
-      <td><?php echo $row_payment['product_title']  ?></td>
-      <td><?php echo number_format($row_payment['product_price'])?></td>
+      <td><?php echo $row_payment['s_name']  ?></td>
+      <td><?php echo $row_payment['r_name']  ?></td>
+      <td><?php echo $row_payment['date_created2']  ?></td>
+      <td><?php echo $row_payment['status'] ?></td>
       <td>
-        <?php if ($row_payment['stock']== 0) { ?>
-          <a href="all_product?stock=<?php echo $row_payment['product_id']?>" onclick="return confirm('Do you want to make this action');" class="btn btn-sm btn-success" >In-Stock</a>
-       <?php  }else{ ?>
-          
-          <a href="all_product?stock1=<?php echo $row_payment['product_id']?>" onclick="return confirm('Do you want to make this action'');" class="btn btn-sm btn-danger" >Out of Stock</a>
-      <?php  } ?>
         
-        <a href="edit_product?id=<?php echo $row_payment['product_id']  ?>" class="btn btn-sm btn-warning">Edit</a> <a href="all_product?del=<?php echo $row_payment['product_id']?>" onclick="return confirm('Do you want to delete');" class="btn btn-sm btn-danger" >Delete</a></td>
+        <a href="edit_product?id=<?php echo $row_payment['id']  ?>" class="btn btn-sm btn-warning">Edit</a> <a href="all_product?del=<?php echo $row_payment['id']?>" onclick="return confirm('Do you want to delete');" class="btn btn-sm btn-danger" >Delete</a></td>
     </tr>
     
       <?php } ?>
@@ -81,17 +79,14 @@ function format_date($date){
   
       $id=$_GET['del'];
 
-      $ck=mysqli_query($conn,"SELECT * FROM `products` WHERE product_id ='$id' ");
+      $ck=mysqli_query($conn,"SELECT * FROM `shipping` WHERE id ='$id' ");
   $ftch=mysqli_fetch_array($ck);
 
-      $sql = "DELETE from products where product_id =$id";
+      $sql = "DELETE from shipping where id =$id";
       $result = $conn->query($sql);
 
-
-      unlink('product_images/'.$ftch['product_image']);
-      unlink('product_images/resized_'.$ftch['product_image']);
        
-      echo "<script>alert('Product has been deleted')</script>";
+      echo "<script>alert('Shipping  has been deleted')</script>";
           echo "<script>window.open('all_product','_self')</script>";
       }
 

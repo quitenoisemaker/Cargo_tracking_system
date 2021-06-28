@@ -19,194 +19,131 @@ function format_date($date){
         <div class="card-header alert alert-warning text-center">
             <b>Edit Product</b>
         </div>
+<!--  -->
+        
         <div class="card-body">
             <form action="" method="POST" enctype="multipart/form-data">
                 <div class="row justify-content-between align-items-center p-4">
                     <div class="col-lg-12">
+
+                        <?php 
+                     $id=$_GET['id'];
+                    $get_code=mysqli_query($conn, "SELECT * FROM `shipping` WHERE id='$id'");
+                    $row_code=mysqli_fetch_array($get_code);
+
+                    ?>
                         <!-- Button -->
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Product Title</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required value="<?php 
-                                $id=$_GET['id'];
-                                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                                $row_p=mysqli_fetch_array($get_p);
-                                echo $row_p['product_title'];
-                            ?>" name="title" placeholder="Enter product title">
+                            <label for="exampleInputEmail1">Tracking Number <small class="text-danger">*</small></label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $row_code['tracking_num'];?>" readonly required name="tracking" placeholder="">
                         </div>
                     </div>
                     <div class="col-lg-6">
+                        <label for="exampleInputEmail1">SHIPPER DETAILS</label>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Original Product Price</label>
-                            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php 
-                                $id=$_GET['id'];
-                                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                                $row_p=mysqli_fetch_array($get_p);
-                                echo $row_p['aproduct_price'];
-                            ?>" name="oprice" placeholder="Enter original price">
+                            
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="s_name" value="<?php echo $row_code['s_name'];?>" placeholder="Shipper name">
+                        </div>
+                        <div class="form-group">
+                            
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="s_phone" value="<?php echo $row_code['s_phone'];?>" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="s_email" value="<?php echo $row_code['s_email'];?>" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="s_address" value="<?php echo $row_code['s_address'];?>" placeholder="Address">
                         </div>
                     </div>
                     <div class="col-lg-6">
+                        <label for="exampleInputEmail1">RECIEVER DETAILS</label>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Selling Product Price</label>
-                            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required value="<?php 
-                                $id=$_GET['id'];
-                                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                                $row_p=mysqli_fetch_array($get_p);
-                                echo $row_p['product_price'];
-                            ?>" name="price" placeholder="Enter selling price">
+                            
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="r_name" value="<?php echo $row_code['r_name'];?>" placeholder="Reciever name">
                         </div>
-                    </div>
-                    <div class="col-lg-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Product Image1</label>
-                            <input accept="image/*" type="file" name="myfile" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="r_phone" value="<?php echo $row_code['r_phone'];?>" placeholder="Phone Number">
                         </div>
-                    </div>
-                     <!-- <div class="col-lg-12">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Delivery Amount</label>
-                            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php 
-                                $id=$_GET['id'];
-                                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                                $row_p=mysqli_fetch_array($get_p);
-                                echo $row_p['delivery'];
-                            ?>" name="dprice" placeholder="Enter delivery price">
+                            
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="r_email" value="<?php echo $row_code['r_email'];?>" placeholder="Email">
                         </div>
-                    </div> -->
-                    <!-- <div class="col-lg-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Product Image2 <span class="text-muted">(optional)</span></label>
-                            <input accept="image/*" type="file" name="myfile2" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="r_address" value="<?php echo $row_code['r_address'];?>" placeholder="Address">
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Product Image3 <span class="text-muted">(optional)</span></label>
-                            <input accept="image/*" type="file" name="myfile3" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        </div>
-                    </div> -->
-                    <div class="col-lg-12 form-group">
-                        <label for="exampleFormControlTextarea1">Product Description</label>
-                        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" required rows="3"><?php 
-                                $id=$_GET['id'];
-                                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                                $row_p=mysqli_fetch_array($get_p);
-                                echo $row_p['product_desc'];
-                            ?></textarea>
                     </div>
                     <div class="col-lg-12">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Product Keyword</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required value="<?php 
-                                $id=$_GET['id'];
-                                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                                $row_p=mysqli_fetch_array($get_p);
-                                echo $row_p['product_keywords'];
-                            ?>" name="keyword" placeholder="Enter product keyword">
+                            <label for="exampleInputEmail1">SHIPMENT DETAILS</label>
                         </div>
                     </div>
-                   <!--  <div class="col-lg-6">
-                        <select class="form-control" name="category">
-                            <option selected="" disabled="">Select Category</option>
-                            <option>Default select</option>
-                            <option>Default select</option>
-                        </select>
-                    </div> -->
-
-                    <div class="col-lg-3">
+                   <div class="col-lg-6">
+                      
+                        <div class="form-group">
+                            
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="package" value="<?php echo $row_code['packages2'];?>" placeholder="Package">
+                        </div>
+                        <div class="form-group">
+                            
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="weight" value="<?php echo $row_code['weight2'];?>" placeholder="Weight">
+                        </div>
+                        <div class="form-group">
+                            
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="destination" value="<?php echo $row_code['destination2'];?>" placeholder="Destination">
+                        </div>
+                        <label>Status</label>
+                                <select required class="form-control" name="status">
+                                    <option value="" selected disabled><?php echo $row_code['status'];?></option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Pickup">Pickup</option>
+                                    <option value="On Hold">On Hold</option>
+                                    <option value="Out for Delivery">Out for Delivery</option>
+                                    <option value="Enroute">Enroute</option>
+                                    <option value="Cancelled">Cancelled</option>
+                                    <option value="Delivered">Delivered</option>
+                                    <option value="Returned">Returned</option>
+                                </select>
+                      
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            
+                            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $row_code['qty'];?>" name="quantity" placeholder="Quantity">
+                        </div>
+                        <div class="form-group">
+                            
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="origin" value="<?php echo $row_code['origin2'];?>" placeholder="Origin">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label>Expected Delivery Date</label>
+                            <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="d_date" value="<?php echo $row_code['pickup_date'];?>" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>Percentage</label>
+                            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="percentage" value="<?php echo $row_code['percentage2'];?>" placeholder="">
+                        </div>
                         
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Product Size1 <span class="text-muted">(optional)</span></label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php 
-                                $id=$_GET['id'];
-                                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                                $row_p=mysqli_fetch_array($get_p);
-                                echo $row_p['product_size1'];
-                            ?>" name="size1" placeholder="Enter size">
-                        </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-12">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Product Size2 <span class="text-muted">(optional)</span></label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php 
-                                $id=$_GET['id'];
-                                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                                $row_p=mysqli_fetch_array($get_p);
-                                echo $row_p['product_size2'];
-                            ?>" name="size2" placeholder="Enter size">
+                            
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="current_location" value="<?php echo $row_code['current_location'];?>" placeholder="Enter current_location">
                         </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Product Size3 <span class="text-muted">(optional)</span></label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php 
-                                $id=$_GET['id'];
-                                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                                $row_p=mysqli_fetch_array($get_p);
-                                echo $row_p['product_size3'];
-                            ?>" name="size3" placeholder="Enter size">
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Product Size4 <span class="text-muted">(optional)</span></label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php 
-                                $id=$_GET['id'];
-                                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                                $row_p=mysqli_fetch_array($get_p);
-                                echo $row_p['product_size4'];
-                            ?>" name="size4" placeholder="Enter size">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3">
                         
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Product Color1 <span class="text-muted">(optional)</span></label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php 
-                                $id=$_GET['id'];
-                                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                                $row_p=mysqli_fetch_array($get_p);
-                                echo $row_p['product_color1'];
-                            ?>" name="color1" placeholder="Enter color">
-                        </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Product Color2 <span class="text-muted">(optional)</span></label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php 
-                                $id=$_GET['id'];
-                                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                                $row_p=mysqli_fetch_array($get_p);
-                                echo $row_p['product_color2'];
-                            ?>" name="color2" placeholder="Enter color">
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Product Color3 <span class="text-muted">(optional)</span></label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php 
-                                $id=$_GET['id'];
-                                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                                $row_p=mysqli_fetch_array($get_p);
-                                echo $row_p['product_color3'];
-                            ?>" name="color3" placeholder="Enter color">
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Product Color4 <span class="text-muted">(optional)</span></label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php 
-                                $id=$_GET['id'];
-                                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                                $row_p=mysqli_fetch_array($get_p);
-                                echo $row_p['product_color4'];
-                            ?>" name="color4" placeholder="Enter color">
-                        </div>
+                    <br>
+                    <div class="col-lg-12 form-group">
+                        <label for="exampleFormControlTextarea1">Comments</label>
+                        <textarea class="form-control" name="comment" id="exampleFormControlTextarea1" rows="2"><?php echo $row_code['comment2'];?></textarea>
                     </div>
                     <div>
                         <button class="btn btn-primary btn-sm text-white" name="submit">
-                            Edit
+                            Update
                         </button>
                     </div>
                 </div>
@@ -223,47 +160,9 @@ function format_date($date){
 <?php
     $id=$_GET['id'];
     
-    if (isset($_POST['submit'])) {
+    if (isset($_POST['submit'])) {            
 
-          @$name = $_FILES['myfile'] ['name'];
-          @$tmp_name = $_FILES['myfile'] ['tmp_name'];
-          $extension = substr($name, strpos($name, '.') +1 );
-          @$type = $_FILES['myfile'] ['type'];
-          @$size = $_FILES['myfile'] ['size'];
-          $max_size = 5000000;
-              
-        $location='product_images/';
-
-        if (!empty($_POST['oprice']) && $_POST['oprice'] <= $_POST['price']) {
-                # code...
-                echo "<script>alert('Original Product Price must be greater than the Selling Product Price')</script>";
-            }else{    
-
-        if ($size <= $max_size) {
- 
-       move_uploaded_file($tmp_name, $location.$name );
-
-       
-
-                //updating file upload
-                $id=$_GET['id'];
-                $get_p=mysqli_query($conn, "SELECT * FROM products WHERE product_id='$id'");
-                $row_p=mysqli_fetch_array($get_p);
-                $name2= $row_p['product_image'];
-
-                if (empty($name)) {
-                    $name=$name2;
-                }
-                //end
-
-                $target_file = $location.$name;
-            $resized_file = $location.'resized_'.$name;
-            
-            image_crop($target_file, $resized_file, $tn_w = 300, $tn_h = 300, $quality = 70);
-            
-            
-
-            $update_product="UPDATE products SET product_title='$_POST[title]',product_price='$_POST[price]',aproduct_price='$_POST[oprice]',product_desc='$_POST[description]',product_image='$name',product_size1='$_POST[size1]',product_size2='$_POST[size2]',product_size3='$_POST[size3]',product_size4='$_POST[size4]',product_color1='$_POST[color1]',product_color2='$_POST[color2]',product_color3='$_POST[color3]',product_color4='$_POST[color4]',product_keywords='$_POST[keyword]' WHERE product_id='$_GET[id]'";
+            $update_product="UPDATE `shipping` SET `s_name`='$_POST[s_name]',`s_phone`='$_POST[s_phone]',`s_email`='$_POST[s_email]',`s_address`='$_POST[s_address]',`r_name`='$_POST[r_name]',`r_phone`='$_POST[r_phone]',`r_email`='$_POST[r_email]',`r_address`='$_POST[r_address]',`status`='$_POST[status]',`weight2`='$_POST[weight]',`packages2`='$_POST[package]',`qty`='$_POST[quantity]',`origin2`='$_POST[origin]',`destination2`='$_POST[destination]',`current_location`='$_POST[current_location]',`pickup_date`='$_POST[d_date]',`comment2`='$_POST[comment]',`percentage2`='$_POST[percentage]' WHERE id='$id'";
 
               $sql= mysqli_query($conn, $update_product);
 
@@ -274,19 +173,10 @@ function format_date($date){
           echo "<script>alert('Edit successfully')</script>";
           echo "<script>window.open('all_product','_self')</script>";
         }else{
-          echo "<script>alert('Opp! Error')</script>";
-        }
-          
-      
+                echo "<script>alert('Error Updating')</script>";
 
-        }else{
-
-            echo "<script>alert('Opp! File is too')</script>";
         }
         }
-
-    }
-
 
   ?>
 <!-- Mirrored from www.ansonika.com/sparker/admin_section/listings.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Dec 2018 07:14:58 GMT -->

@@ -139,6 +139,13 @@ function format_date($date){
                         </div>
                         
                     </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="current_location" placeholder="Enter current_location">
+                        </div>
+                        
+                    </div>
                     <br>
                     <div class="col-lg-12 form-group">
                         <label for="exampleFormControlTextarea1">Comments</label>
@@ -165,7 +172,7 @@ function format_date($date){
     if (isset($_POST['submit'])) {
         
 
-$insert_shipping = mysqli_query($conn, "INSERT INTO `shipping`(`id`, `s_name`, `s_phone`, `s_email`, `s_address`, `r_name`, `r_phone`, `r_email`, `r_address`, `tracking_num`, `status`, `weight2`, `packages2`, `qty`, `origin2`, `destination2`, `date_created2`, `pickup_date`, `pickup_time`, `comment2`, `percentage2`) VALUES (NULL, '$_POST[s_name]', '$_POST[s_phone]', '$_POST[s_email]', '$_POST[s_address]', '$_POST[r_name]', '$_POST[r_phone]', '$_POST[r_email]', '$_POST[r_address]', '$_POST[tracking]', '$_POST[status]', '$_POST[weight]', '$_POST[package]', '$_POST[quantity]', '$_POST[origin]', '$_POST[destination]', '$date', '$_POST[d_date]', '$_POST[d_date]', '$_POST[comment]', '$_POST[percentage]')");
+$insert_shipping = mysqli_query($conn, "INSERT INTO `shipping`(`id`, `s_name`, `s_phone`, `s_email`, `s_address`, `r_name`, `r_phone`, `r_email`, `r_address`, `tracking_num`, `status`, `weight2`, `packages2`, `qty`, `origin2`, `destination2`, `current_location`, `date_created2`, `pickup_date`, `pickup_time`, `comment2`, `percentage2`) VALUES (NULL, '$_POST[s_name]', '$_POST[s_phone]', '$_POST[s_email]', '$_POST[s_address]', '$_POST[r_name]', '$_POST[r_phone]', '$_POST[r_email]', '$_POST[r_address]', '$_POST[tracking]', '$_POST[status]', '$_POST[weight]', '$_POST[package]', '$_POST[quantity]', '$_POST[origin]', '$_POST[destination]', '$_POST[current_location]', '$date', '$_POST[d_date]', '$_POST[d_date]', '$_POST[comment]', '$_POST[percentage]')");
 
         if($insert_shipping){
           echo "<script>alert('Subimitted successfully')</script>";

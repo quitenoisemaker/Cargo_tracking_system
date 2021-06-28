@@ -75,56 +75,62 @@ include('function/function.php');
                             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $row_details['percentage2'].'%'; ?>;"></div>
                         </div>
                         <div class="d-flex bd-highlight">
-                            <div class="p-2 flex-grow-1 bd-highlight"><?php echo $row_details['percentage2']."%"; ?> in process</div>
-                            <div class="p-2 bd-highlight">Completed</div>
+                            <div class="p-2 flex-grow-1 bd-highlight"><b><?php echo $row_details['percentage2']."%"; ?> in process</b></div>
+                            <div class="p-2 bd-highlight"><b>Completed</b></div>
                         </div>
                     </div>
                     <div class="row p-3">
                         <div class="col-lg-6">
                             <h6>Shipper Information</h6>
                             <hr>
-                            <p class="mb-0"><?php echo $row_details['s_name']; ?></p>
-                            <p class="mb-0"><?php echo $row_details['s_address']; ?></p>
-                            <p class="mb-0"><?php echo $row_details['s_phone']; ?></p>
-                            <p class="mb-0"><?php echo $row_details['s_email']; ?></p>
+                            <p class="mb-0 text-muted"><?php echo $row_details['s_name']; ?></p>
+                            <p class="mb-0 text-muted"><?php echo $row_details['s_address']; ?></p>
+                            <p class="mb-0 text-muted"><?php echo $row_details['s_phone']; ?></p>
+                            <p class="mb-0 text-muted"><?php echo $row_details['s_email']; ?></p>
                         </div>
                         <div class="col-lg-6">
                             <h6>Receiver Information</h6>
                             <hr>
-                            <p class="mb-0"><?php echo $row_details['r_name']; ?></p>
-                            <p class="mb-0"><?php echo $row_details['r_address']; ?></p>
-                            <p class="mb-0"><?php echo $row_details['r_phone']; ?></p>
-                            <p class="mb-0"><?php echo $row_details['r_email']; ?></p>
+                            <p class="mb-0 text-muted"><?php echo $row_details['r_name']; ?></p>
+                            <p class="mb-0 text-muted"><?php echo $row_details['r_address']; ?></p>
+                            <p class="mb-0 text-muted"><?php echo $row_details['r_phone']; ?></p>
+                            <p class="mb-0 text-muted"><?php echo $row_details['r_email']; ?></p>
                         </div>
                     </div>
-                    <div class="p-3 bg-dark text-white text-center">SHIPMENT STATUS: <?php echo strtoupper($row_details['status']); ?></div>
+                    <div class="p-3 bg-dark text-white">
+                        
+                        <div class="d-flex bd-highlight">
+                            <div class="pl-4 flex-grow-1 bd-highlight" style="font-size: 14px">CURRENT LOCATION: <?php echo strtoupper($row_details['current_location']); ?></div>
+                            <div class="pr-4 bd-highlight" style="font-size: 14px">SHIPMENT STATUS: <?php echo strtoupper($row_details['status']); ?></div>
+                        </div>
+                    </div>
                     <div class="p-3">
                         <h6>Shipment Information</h6>
                         <hr>
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
                                 <p style="font-size: 13px"><b>Origin</b></p>
-                                <p style="margin-top: -20px; font-size: 16px"><?php echo $row_details['origin2']; ?></p>
+                                <p style="margin-top: -20px; font-size: 16px" class="text-muted"><?php echo $row_details['origin2']; ?></p>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
                                 <p style="font-size: 13px"><b>Package</b></p>
-                                <p style="margin-top: -20px; font-size: 16px"><?php echo $row_details['packages2']; ?></p>
+                                <p style="margin-top: -20px; font-size: 16px" class="text-muted"><?php echo $row_details['packages2']; ?></p>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
                                 <p style="font-size: 13px"><b>Status</b></p>
-                                <p style="margin-top: -20px; font-size: 16px"><?php echo $row_details['status']; ?></p>
+                                <p style="margin-top: -20px; font-size: 16px" class="text-muted"><?php echo $row_details['status']; ?></p>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
                                 <p style="font-size: 13px"><b>Destination</b></p>
-                                <p style="margin-top: -20px; font-size: 16px"><?php echo $row_details['destination2']; ?></p>
+                                <p style="margin-top: -20px; font-size: 16px" class="text-muted"><?php echo $row_details['destination2']; ?></p>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
                                 <p style="font-size: 13px"><b>Weight</b></p>
-                                <p style="margin-top: -20px; font-size: 16px"><?php echo $row_details['weight2']; ?></p>
+                                <p style="margin-top: -20px; font-size: 16px" class="text-muted"><?php echo $row_details['weight2']; ?></p>
                             </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
                                 <p style="font-size: 13px"><b>Quantity</b></p>
-                                <p style="margin-top: -20px; font-size: 16px"><?php echo $row_details['qty']; ?></p>
+                                <p style="margin-top: -20px; font-size: 16px" class="text-muted"><?php echo $row_details['qty']; ?></p>
                             </div>
                         </div>
                     </div>
