@@ -149,18 +149,21 @@ include('function/function.php');
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php
+                                        $tracking_num=$_GET['tracking_num'];
+
+                                    $get_history=mysqli_query($conn, "SELECT * FROM histrory WHERE tracking_num='$tracking_num'");
+                                   while ( $row_history=mysqli_fetch_array($get_history)) {  
+                                 ?>              
                                     <tr>
-                                        <td style="font-size: 14px">Larry</td>
-                                        <td style="font-size: 14px">Mark</td>
-                                        <td style="font-size: 14px">Otto</td>
-                                        <td style="font-size: 14px">@mdo</td>
+                                        <td style="font-size: 14px"><?php echo $row_history['date_updated'] ?></td>
+                                        <td style="font-size: 14px"><?php echo $row_history['time_updated'] ?></td>
+                                        <td style="font-size: 14px"><?php echo $row_history['location'] ?></td>
+                                        <td style="font-size: 14px"><?php echo $row_history['status'] ?></td>
                                     </tr>
-                                    <tr>
-                                        <td style="font-size: 14px">Larry</td>
-                                        <td style="font-size: 14px">Mark</td>
-                                        <td style="font-size: 14px">Otto</td>
-                                        <td style="font-size: 14px">@mdo</td>
-                                    </tr>
+
+                                   <?php } ?>
+                                    
                                     
                                 </tbody>
                             </table>

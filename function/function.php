@@ -8,6 +8,45 @@ $conn =new mysqli('localhost', 'root', '' , 'tracking');
 		}
 
 
+
+
+
+
+//mailjet
+		require 'vendor/autoload.php';
+    use \Mailjet\Resources;
+    function sendMails2($from_mail, $from_name, $receiver_mail, $txt, $subject){
+  
+  
+  $mj = new \Mailjet\Client('97a2ab273bbdb0f23c15ac1ed39cf5f7','11d45a703c85817a08167a93660e12c4',true,['version' => 'v3.1']);
+  $body = [
+    'Messages' => [
+      [
+        'From' => [
+          'Email' => "$from_mail",
+          'Name' => "$from_name"
+        ],
+        'To' => [
+          [
+            'Email' => "$receiver_mail"
+            
+          ]
+        ],
+        'Subject' => "$subject",
+        // 'TextPart' => "My first Mailjet email",
+        'HTMLPart' => "$txt",
+        'CustomID' => "AppGettingStartedTest"
+      ]
+    ]
+  ];
+  $response = $mj->post(Resources::$Email, ['body' => $body]);
+  $response->success() && var_dump($response->getData());
+
+}
+
+//ends
+
+
 //getting the user IP address
 function getIp(){
 	$ip = $_SERVER['REMOTE_ADDR'];
