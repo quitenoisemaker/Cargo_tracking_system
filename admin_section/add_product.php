@@ -142,7 +142,7 @@ function format_date($date){
                     <div class="col-lg-12">
                         <div class="form-group">
                             
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="current_location" placeholder="Enter current_location">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="current_location" placeholder="Enter Current location">
                         </div>
                         
                     </div>
@@ -173,6 +173,97 @@ function format_date($date){
         
 
 $insert_shipping = mysqli_query($conn, "INSERT INTO `shipping`(`id`, `s_name`, `s_phone`, `s_email`, `s_address`, `r_name`, `r_phone`, `r_email`, `r_address`, `tracking_num`, `status`, `weight2`, `packages2`, `qty`, `origin2`, `destination2`, `current_location`, `date_created2`, `pickup_date`, `pickup_time`, `comment2`, `percentage2`) VALUES (NULL, '$_POST[s_name]', '$_POST[s_phone]', '$_POST[s_email]', '$_POST[s_address]', '$_POST[r_name]', '$_POST[r_phone]', '$_POST[r_email]', '$_POST[r_address]', '$_POST[tracking]', '$_POST[status]', '$_POST[weight]', '$_POST[package]', '$_POST[quantity]', '$_POST[origin]', '$_POST[destination]', '$_POST[current_location]', '$date', '$_POST[d_date]', '$_POST[d_date]', '$_POST[comment]', '$_POST[percentage]')");
+
+
+
+$reciever=$_POST['r_email'];
+
+              $message=' <style>
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            font-family: "Roboto", sans-serif !important;
+            font-size: 14px;
+            margin-bottom: 10px;
+            line-height: 24px;
+            color:#8094ae;
+            font-weight: 400;
+        }
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+    </style>
+
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #f5f6fa;">
+    <center style="width: 100%; background-color: #f5f6fa;">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f5f6fa">
+            <tr>
+               <td style="padding: 40px 0;">
+                    
+                    <table style="width:100%;max-width:620px;margin:0 auto;background-color:#ffffff;">
+                        <tbody>
+                            <tr>
+                                <td style="text-align:center;padding: 30px 30px 20px">
+                                    <h5 style="margin-bottom: 24px; color: #526484; font-size: 15px; font-weight: 400; line-height: 28px;">Dear '.$_POST['r_name'].'<br>We are pleased to inform you that your shipment has now cleared customs and is now ' .$_POST['status'].'</h5>
+                                    <h2 style="margin-bottom: 15px; color: #526484;">Tracking Information</h2>
+                                    <p style="margin-bottom: 15px;">Tracking Number: '. $_POST['tracking'] .'</p>
+                                    <p style="margin-bottom: 15px;">Location: '. $_POST['current_location'] .'</p>
+                                    <p style="margin-bottom: 15px;">Tracking URL: http://localhost/tracking_system/result?tracking_num='. $_POST['tracking'] .'</p>
+                                    <p style="margin-bottom: 15px;">Latest International Scan: Customs status updated</p>
+
+                                    <p style="margin-bottom: 15px;">We hope this meets with your approval. Please do not hesitate to get in touch if we can be of any further assistance.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width:100%;max-width:620px;margin:0 auto;">
+                        <tbody>
+                            <tr>
+                                <td style="text-align: center; padding:25px 20px 0;">
+                                    <p style="font-size: 13px;">Copyright © 2020 DashLite. All rights reserved.</p>
+                                    
+                                    <p style="padding-top: 15px; font-size: 12px;">This email was sent to you as a registered user. To update your emails preferences <a style="color: #6576ff; text-decoration:none;" href="#">click here</a>.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+               </td>
+            </tr>
+        </table>
+    </center>
+</body>';
+
+        
+        sendMails2('samsonojugo@gmail.com', 'samson', $reciever, $message, 'Cargo Tracking');
 
         if($insert_shipping){
           echo "<script>alert('Subimitted successfully')</script>";

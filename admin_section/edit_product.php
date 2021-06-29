@@ -172,6 +172,8 @@ function format_date($date){
 
               $insert_history = mysqli_query($conn, "INSERT INTO `histrory`(`id`, `tracking_num`, `location`, `status`, `date_updated`, `time_updated`, `remarks`) VALUES (NULL,'$_POST[tracking]','$_POST[current_location]','$_POST[status]','$date','$time','$_POST[comment]')");
 
+              $reciever=$_POST['r_email'];
+
               $message=' <style>
         /* What it does: Remove spaces around the email design added by some email clients. */
         /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
@@ -227,10 +229,10 @@ function format_date($date){
                         <tbody>
                             <tr>
                                 <td style="text-align:center;padding: 30px 30px 20px">
-                                    <h5 style="margin-bottom: 24px; color: #526484; font-size: 15px; font-weight: 400; line-height: 28px;">Dear '.$row_code['r_name'].'<br>We are pleased to inform you that your shipment has now cleared customs and is now ' .$row_code['status'].'</h5>
+                                    <h5 style="margin-bottom: 24px; color: #526484; font-size: 15px; font-weight: 400; line-height: 28px;">Dear '.$_POST['r_name'].'<br>We are pleased to inform you that your shipment has now cleared customs and is now ' .$_POST['status'].'</h5>
                                     <h2 style="margin-bottom: 15px; color: #526484;">Tracking Information</h2>
                                     <p style="margin-bottom: 15px;">Tracking Number: '. $row_code['tracking_num'] .'</p>
-                                    <p style="margin-bottom: 15px;">Location: '. $row_code['current_location'] .'</p>
+                                    <p style="margin-bottom: 15px;">Location: '. $_POST['current_location'] .'</p>
                                     <p style="margin-bottom: 15px;">Tracking URL: http://localhost/tracking_system/result?tracking_num='. $row_code['tracking_num'] .'</p>
                                     <p style="margin-bottom: 15px;">Latest International Scan: Customs status updated</p>
 
@@ -257,7 +259,7 @@ function format_date($date){
 </body>';
 
         
-        sendMails2('samsonojugo@gmail.com', 'samson', 'ojugosamson007@gmail.com', $message, 'Cargo Tracking');
+        sendMails2('samsonojugo@gmail.com', 'samson', $reciever, $message, 'Cargo Tracking');
 
         if($sql){
           echo "<script>alert('Edit successfully')</script>";

@@ -1,6 +1,10 @@
 <?php
 include('function/function.php');
 
+if (!isset($_GET['submit'])) {
+    header('location: index');
+}
+
 ?>
 <!DOCTYPE html>
 <html>
