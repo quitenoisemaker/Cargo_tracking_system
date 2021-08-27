@@ -1,5 +1,5 @@
 <?php ob_start(); 
-$conn =new mysqli('localhost', 'premucwu_mystore', 'dequiet1_' , 'premucwu_mystore');
+$conn =new mysqli('localhost', 'username', 'password' , 'db_name');
         // $conn =new mysqli('localhost', 'servdqvt_serviceswise', 'dequiet1' , 'servdqvt_skilled_db');
         if ($conn->connect_error) {
             echo "<b>Error:</b> Connection failed - $conn->connect_error";
@@ -20,7 +20,7 @@ use \Mailjet\Resources;
     function sendMails2($from_mail, $from_name, $receiver_mail, $txt, $subject){
   
   
-  $mj = new \Mailjet\Client('97a2ab273bbdb0f23c15ac1ed39cf5f7','11d45a703c85817a08167a93660e12c4',true,['version' => 'v3.1']);
+  $mj = new \Mailjet\Client('$key','$key',true,['version' => 'v3.1']);
   $body = [
     'Messages' => [
       [
