@@ -1,1 +1,0 @@
-<script src="../AgoraRTCSDK-3.1.0.js"></script>
